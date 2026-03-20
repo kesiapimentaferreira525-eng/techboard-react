@@ -1,49 +1,41 @@
-
 import './App.css'
 import logo from './img/logo.png'
 import banner from './img/banner.png'
 
-// no react , componentes sao FUNÇOES
-
-// props é um OBJETO
-//props.children
-
 function TituloFormulario (props){
-return (
+  return (
     <h2>
       {props.children}
     </h2>    
-)
-
+  )
 }
 
 function FormularioDeEventos(){
-
   return(
-        <form className="form-evento">
-          <TituloFormulario>
-             Preencha para criar um evento
-          </TituloFormulario> 
-        <fieldset>
+    <form className="form-evento">
+      <TituloFormulario>
+        Preencha para criar um evento
+      </TituloFormulario> 
+
+      <fieldset>
         <label htmlFor="nome">
           Qual o nome do evento?
         </label>
-        <input type="text" id='nome'placeholder='Summer dev this'/>
+        <input type="text" id="nome" placeholder="Summer dev this" />
       </fieldset>
-        </form>
+    </form>
   )
-
 }
-function App() {
 
+function App() {
   return (
     <main>
       <header>
-       <img src={logo} alt="" />
+        <img src={logo} alt="" />
       </header>  
 
       <section>
-       <img src={banner} alt="" />
+        <img src={banner} alt="" />
       </section>  
 
       <FormularioDeEventos/>     
