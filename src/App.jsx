@@ -23,12 +23,12 @@ function FormularioDeEventos() {
   return (
     <form className="form-evento">
       <TituloFormulario>
-        Preencha para criar um evento
+        Preencha qual o nome do evento?
       </TituloFormulario>
 
       <CampoDeFormulario>
         <Label htmlFor="nome">
-          Qual o nome do evento?
+          Adicione qual o evento? 
         </Label>
         <Input
           id="nome"
@@ -56,3 +56,4 @@ function App() {
 }
 
 export default App;
+
