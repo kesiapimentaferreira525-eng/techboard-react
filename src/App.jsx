@@ -1,7 +1,7 @@
 import './App.css';
 // 1. Você importou corretamente aqui:
-import logo from './img/logo.png';
-import banner from './img/banner.png';
+import logo from './logo.png';
+import banner from './banner.png';
 
 function TituloFormulario({ children }) {
   return <h2>{children}</h2>;
