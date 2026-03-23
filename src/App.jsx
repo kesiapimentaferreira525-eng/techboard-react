@@ -1,44 +1,56 @@
-import './App.css'
-import logo from './img/logo.png'
-import banner from './img/banner.png'
+import './App.css';
+// 1. Você importou corretamente aqui:
+import logo from './img/logo.png';
+import banner from './img/banner.png';
 
-function TituloFormulario (props){
-  return (
-    <h2>
-      {props.children}
-    </h2>    
-  )
+function TituloFormulario({ children }) {
+  return <h2>{children}</h2>;
 }
 
-function FormularioDeEventos(){
-  return(
+function CampoDeFormulario({ children }) {
+  return <fieldset>{children}</fieldset>;
+}
+
+function Label({ children, htmlFor }) {
+  return <label htmlFor={htmlFor}>{children}</label>;
+}
+
+function Input({ id, type = "text", placeholder }) {
+  return <input id={id} type={type} placeholder={placeholder} />;
+}
+
+function FormularioDeEventos() {
+  return (
     <form className="form-evento">
       <TituloFormulario>
         Preencha para criar um evento
-      </TituloFormulario> 
+      </TituloFormulario>
 
-      <fieldset>
-        <label htmlFor="nome">
+      <CampoDeFormulario>
+        <Label htmlFor="nome">
           Qual o nome do evento?
-        </label>
-        <input type="text" id="nome" placeholder="Summer dev this" />
-      </fieldset>
+        </Label>
+        <Input
+          id="nome"
+          placeholder="Summer dev this"
+        />
+      </CampoDeFormulario>
     </form>
-  )
+  );
 }
 
 function App() {
   return (
     <main>
       <header>
-        <img src={logo} alt="" />
-      </header>  
+        <img src={logo} alt="Logo" />
+      </header>
 
       <section>
-        <img src={banner} alt="" />
-      </section>  
+        <img src={banner} alt="Banner" />
+      </section>
 
-      <FormularioDeEventos/>     
+      <FormularioDeEventos />
     </main>
   );
 }
